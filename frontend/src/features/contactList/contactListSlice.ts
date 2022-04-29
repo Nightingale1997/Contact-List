@@ -1,21 +1,20 @@
-import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { RootState, AppThunk } from '../../app/store';
-import { Contact } from './contactListAPI';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Contact } from "./contactListAPI";
 
 export interface ContactListState {
-  users: Contact[]
-  loading: boolean
-  error:boolean
+  users: Contact[];
+  loading: boolean;
+  error: boolean;
 }
 
 const initialState: ContactListState = {
   users: [],
   loading: false,
-  error: false
+  error: false,
 };
 
 export const contactListSlice = createSlice({
-  name: 'contactListSlice',
+  name: "contactListSlice",
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {

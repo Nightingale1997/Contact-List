@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Box,
   Button,
@@ -7,13 +8,10 @@ import {
   Grid,
   InputAdornment,
   List,
-  ListItem,
-  ListItemText,
-  Paper,
   TextField,
   Typography,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
 import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
@@ -37,7 +35,7 @@ export function ContactList() {
     dispatch(getContacts());
   }, []);
 
-  var filteredContacts = [...contacts];
+  let filteredContacts = [...contacts];
   if (searchQuery) {
     filteredContacts = filteredContacts.filter(
       (contact) =>

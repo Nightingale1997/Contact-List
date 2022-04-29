@@ -24,8 +24,9 @@ export const sendContact =
         image: image,
       }),
     })
-      .then((response) => dispatch(getContacts()))
+      .then(() => dispatch(getContacts()))
       .catch((error) => {
+        console.error(error);
         dispatch(setFormError(true));
       });
   };

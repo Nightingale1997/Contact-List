@@ -2,14 +2,12 @@ import React, { useState } from "react";
 import { ContactList } from "../contactList/ContactList";
 import {
   Alert,
-  AppBar,
   Box,
   Grid,
   Snackbar,
   ToggleButton,
   ToggleButtonGroup,
   Typography,
-  useTheme,
 } from "@mui/material";
 import { ContactForm } from "../contactForm/ContactForm";
 
@@ -22,7 +20,6 @@ import { setFormError } from "../contactForm/contactFormSlice";
 export function ContactContainer() {
   const [alignment, setAlignment] = useState(false);
   const dispatch = useAppDispatch();
-  const theme = useTheme();
 
   const snackBarOpen = useAppSelector((state) => state.contactForm.formError);
 

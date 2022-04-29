@@ -21,6 +21,7 @@ export const getContacts =
         dispatch(setLoading(false));
       })
       .catch((error) => {
+        console.error(error);
         dispatch(setLoading(false));
         dispatch(setError(true));
       });
@@ -38,7 +39,7 @@ export const deleteContact =
         id: id,
       }),
     })
-      .then((response) => dispatch(getContacts()))
+      .then(() => dispatch(getContacts()))
       .catch((error) => {
         console.error(error);
         dispatch(setFormError(true));

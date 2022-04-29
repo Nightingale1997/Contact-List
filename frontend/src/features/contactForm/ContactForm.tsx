@@ -1,12 +1,4 @@
-import {
-  Alert,
-  Button,
-  Card,
-  Paper,
-  Stack,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Button, Card, Stack, TextField, Typography } from "@mui/material";
 import React, { useEffect, useRef, useState } from "react";
 
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
@@ -64,10 +56,6 @@ export function ContactForm() {
   const updateContactImage = (imageURL: string) => {
     setContactImage(imageURL);
     localStorage.setItem("contactImage", imageURL);
-  };
-
-  const handleContactNameChange = (value: string) => {
-    setContactName(value);
   };
 
   const submitForm = () => {

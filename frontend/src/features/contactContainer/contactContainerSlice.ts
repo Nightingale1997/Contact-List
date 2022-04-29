@@ -1,6 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { SpawnSyncOptionsWithBufferEncoding } from "child_process";
-import { RootState, AppThunk } from "../../app/store";
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface ContactContainerState {
   darkMode: boolean;

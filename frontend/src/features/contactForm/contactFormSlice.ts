@@ -1,6 +1,4 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { SpawnSyncOptionsWithBufferEncoding } from "child_process";
-import { RootState, AppThunk } from "../../app/store";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export interface ContactFormState {
   formError: boolean;

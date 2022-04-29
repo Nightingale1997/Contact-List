@@ -1,26 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import {
-  Alert,
-  AppBar,
-  Box,
-  Button,
-  Divider,
-  Grid,
-  IconButton,
-  ListItemText,
-  Snackbar,
-  Stack,
-  TextField,
-  ToggleButton,
-  ToggleButtonGroup,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import React, { useRef, useState } from "react";
+import { Button, Stack, TextField } from "@mui/material";
 
-import DeleteIcon from "@mui/icons-material/Delete";
-import EditIcon from "@mui/icons-material/Edit";
 import { Contact } from "./contactListAPI";
-import { useAppSelector, useAppDispatch } from "../../app/hooks";
+import { useAppDispatch } from "../../app/hooks";
 import { sendContact } from "../contactForm/contactFormAPI";
 import { setFormError } from "../contactForm/contactFormSlice";
 
